@@ -31,3 +31,12 @@ client.connect(function(err) {
 
   client.close();
 })
+
+app.get('/todos', (req, res) => {
+    res.send('A list of todo items will be returned')
+})
+
+app.post('/', (req, res) => {
+    console.log(req.body)
+    res.send('Posting a Request')
+})
